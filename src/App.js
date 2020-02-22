@@ -4,7 +4,7 @@ import Pokemon from "./Pokemon";
 import { fetchData } from "./helper";
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetchData("https://pokeapi.co/api/v2/pokemon?limit=964").then(res => {
@@ -12,7 +12,7 @@ function App() {
     });
   }, []);
 
-  if (data === null) {
+  if (data.length === 0) {
     return (
       <Container className="h-100">
         <Row className="text-center align-items-center h-100">

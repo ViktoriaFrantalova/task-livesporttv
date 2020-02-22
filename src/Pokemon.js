@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { fetchData } from "./helper";
 import { Card, Accordion, Row, Col, Image } from "react-bootstrap";
+import DetailAbilities from "./DetailAbilities";
 
 function Pokemon(props) {
   const [data, setData] = useState({
@@ -27,7 +28,7 @@ function Pokemon(props) {
   const { weight, sprites, height, base_experience } = data;
 
   return (
-    <tr onClick={getDetail(props.pokemon.url)}>
+    <tr onClick={() => getDetail(props.pokemon.url)}>
       <td>
         <Accordion>
           <Card
@@ -59,6 +60,7 @@ function Pokemon(props) {
                     </Col>
                   </Row>
                 </div>
+                {data.abilities && <DetailAbilities data={data.abilities} />}
               </Card.Body>
             </Accordion.Collapse>
           </Card>
