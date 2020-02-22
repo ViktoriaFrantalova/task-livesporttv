@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./App.scss";
 import { Container, Table, Spinner, Row, Col } from "react-bootstrap";
-import axios from "axios";
-
-const fetchData = async url => await axios.get(url);
+import Pokemon from "./Pokemon";
+import { fetchData } from "./helper";
 
 function App() {
   const [data, setData] = useState(null);
@@ -32,18 +30,12 @@ function App() {
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th>#</th>
             <th>Meno</th>
           </tr>
         </thead>
         <tbody>
           {data.map((pokemon, index) => {
-            return (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{pokemon.name}</td>
-              </tr>
-            );
+            return <Pokemon pokemon={pokemon} key={index} index={index} />;
           })}
         </tbody>
       </Table>
