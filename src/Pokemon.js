@@ -36,7 +36,11 @@ function Pokemon(props) {
               color: "black"
             }}
           >
-            <Accordion.Toggle as={Card.Header} eventKey={index}>
+            <Accordion.Toggle
+              style={{ cursor: "pointer" }}
+              as={Card.Header}
+              eventKey={index}
+            >
               {pokemon.name}
             </Accordion.Toggle>
             <Accordion.Collapse eventKey={index}>
