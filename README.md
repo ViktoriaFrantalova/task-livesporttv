@@ -16,3 +16,5 @@ Během tvorby aplikace commituj jako by šlo o reálný projekt. Pošli odkaz na
 - aby som nemusela vela stylovat tak som pouzila framework [React-Bootstrap](https://react-bootstrap.github.io/)
 - na stahovanie dat som pouzila balicek [axios](https://www.npmjs.com/package/axios)
 - na vyresetovanie defaultnych stylov som pouzila [reset-css](https://www.npmjs.com/package/reset-css)
+
+## [DEMO](https://viktoriafrantalova.github.io/task-livesporttv/)
